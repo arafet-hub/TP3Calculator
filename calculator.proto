@@ -1,0 +1,23 @@
+syntax = "proto3" ; 
+package calculatorPackage;
+service calculator{
+  rpc addition(nombre) returns (resultat);
+  rpc multiplication(nombre) returns (resultat);
+  rpc soustraction(nombre) returns (resultat);
+  rpc division(nombre) returns (resultat);
+
+  }
+  
+  message noparams {}
+  
+  message nombre{
+          int32 x = 1; 
+	      int32 y= 2; 
+
+		  }
+
+  message resultat {
+          int32 res = 1; 
+        string text = 2 ;
+
+}	
